@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!--* Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--* Bootstrap css File  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--* Main css file  -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- loading screen -->
+    <div class="loading-screen z-3 bg-black vh-100 w-100 d-none position-fixed top-0 start-0 end-0 bottom-0  justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <!-- Start sidebar -->
+     <div class="sideBar bg-black  position-fixed min-vh-100 bottom-0  d-flex" style="left: -256.562px; z-index: 4;">
+         <div class="sideBar-tab  d-flex flex-column justify-content-between  p-4">
+             <div class="links">
+                 <ul class="list-unstyled menu overflow-hidden">
+                     <li style="top:300px"  class="py-2 position-relative" onclick="closeSideBar(),showInputs()">Search</li>
+                     <li style="top:300px"  class="py-2 position-relative" onclick="closeSideBar(),getCategories()">Categories</li>
+                     <li style="top:300px"  class="py-2 position-relative" onclick="closeSideBar(),getArea()">Area</li>
+                     <li style="top:300px"  class="py-2 position-relative" onclick="closeSideBar(),getIngredients()">Ingredients</li>
+                     <li style="top:300px"  class="py-2 position-relative" onclick="closeSideBar(),contactUs()">Contact Us</li>
+                 </ul>
+             </div>
+             <div class="nav-footer">
+                 <div class="icons">
+                     <i class="fa-brands fa-facebook"></i>
+                     <i class="fa-brands fa-twitter"></i>
+                     <i class="fa-solid fa-globe"></i>
+                 </div>
+                 <div class="footer">
+                     <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+             <img class="logo" src="./images/logo.png" alt="">
+             <i class="fa-solid  open-close-icon fa-align-justify fa-2x"></i>
+             <div class="">
+                 <i class="fa-solid fa-globe d-block"></i>
+                 <i class="fa-solid fa-share-nodes"></i>
+             </div>
+         </div>
+     </div>
+    <div class="container" >
+        <div id="searchContainer">                 
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+        </div>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
