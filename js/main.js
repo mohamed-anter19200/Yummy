@@ -5,7 +5,7 @@ function showLoadingScreen() {
      $(".loading-screen").removeClass("d-none").addClass("d-flex");
  }
  function hideLoadingScreen() {
-     $(".loading-screen").fadeOut(1000, function() {
+     $(".loading-screen").fadeOut(2000, function() {
          $(this).removeClass("d-flex").addClass("d-none");
          $("body").css({ overflow: "auto" });
      });
@@ -39,6 +39,7 @@ function closeSideBar(){
 }
 async function randomMeals() {
      showLoadingScreen();
+     $('.loading-screen').css("z-index",5);
      const meals = [];
      for (let i = 0; i < 15; i++) {
          const response = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
@@ -50,6 +51,7 @@ async function randomMeals() {
      if(meals != null){
           displayMeals(meals);
           hideLoadingScreen()
+          $('.loading-screen').addClass('z-3');
      }
  };
  randomMeals()
